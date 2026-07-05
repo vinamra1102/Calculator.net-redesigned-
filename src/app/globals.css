@@ -139,3 +139,68 @@ body {
     animation: none;
   }
 }
+
+/* === Hero Section === */
+
+/* Ambient glow — slow drifting blob of accent color */
+@keyframes glow-drift {
+  0%, 100% {
+    transform: translate(-10%, -10%) scale(1);
+    opacity: 0.12;
+  }
+  33% {
+    transform: translate(5%, -5%) scale(1.1);
+    opacity: 0.16;
+  }
+  66% {
+    transform: translate(-5%, 5%) scale(0.95);
+    opacity: 0.10;
+  }
+}
+
+.hero-glow {
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, var(--accent), transparent 70%);
+  animation: glow-drift 10s ease-in-out infinite;
+}
+
+/* Glass panel fallback for browsers without backdrop-filter */
+.glass-panel {
+  background: var(--surface);
+}
+
+@supports (backdrop-filter: blur(12px)) {
+  .glass-panel {
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
+  }
+}
+
+/* Entrance animation — one-shot fade/slide in */
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  animation: hero-enter 250ms ease-out both;
+}
+
+.hero-calc {
+  animation: hero-enter 250ms ease-out 80ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow {
+    animation: none;
+    opacity: 0.12;
+  }
+  .hero-text,
+  .hero-calc {
+    animation: none;
+  }
+}

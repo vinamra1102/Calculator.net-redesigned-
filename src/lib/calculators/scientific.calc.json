@@ -3,6 +3,7 @@
   "category": "math",
   "title": "Scientific Calculator",
   "summary": "Evaluate expressions with trigonometry, logarithms, exponents, and more.",
+  "featured": true,
   "inputs": [
     {
       "id": "expression",

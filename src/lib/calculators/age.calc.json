@@ -3,6 +3,7 @@
   "category": "other",
   "title": "Age Calculator",
   "summary": "Calculate your exact age in years, months, and days from your date of birth.",
+  "featured": true,
   "inputs": [
     {
       "id": "birthdate",

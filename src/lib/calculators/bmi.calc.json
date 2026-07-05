@@ -3,6 +3,7 @@
   "category": "fitness-health",
   "title": "BMI Calculator",
   "summary": "Calculate your Body Mass Index and see which standard band you fall into.",
+  "featured": true,
   "inputs": [
     {
       "id": "weight",

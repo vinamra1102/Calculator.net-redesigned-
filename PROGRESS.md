@@ -45,3 +45,9 @@
 - [x] BUG_TRACEABILITY.md
 - [x] MORNING_REPORT.md
 - [x] Clean git log (7 commits)
+
+## Phase 5 — Round 3 (Section 17)
+- [x] 17.1: Hero split layout — text left, calculator right, ambient glow, glass panel, entrance animation
+- [x] 17.2: Popular calculators section with `featured` flag in DSL schema
+- [x] 17.3: Homepage restructured — hero, popular, category tiles (no full grid)
+- [x] 56 calculators, all passing §13 battery

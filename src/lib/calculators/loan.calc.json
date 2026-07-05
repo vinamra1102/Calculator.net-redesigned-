@@ -3,6 +3,7 @@
   "category": "financial",
   "title": "Loan Calculator",
   "summary": "Calculate monthly payments and total interest for any personal loan.",
+  "featured": true,
   "inputs": [
     {
       "id": "amount",

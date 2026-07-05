@@ -3,6 +3,7 @@
   "category": "math",
   "title": "Percentage Calculator",
   "summary": "Find percentages, percentage change, and what percent one number is of another.",
+  "featured": true,
   "inputs": [
     {
       "id": "mode",

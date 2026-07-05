@@ -37,6 +37,7 @@ export const calculatorSchema = z.object({
   inputs: z.array(inputSchema).min(1),
   kernel: z.string().optional(),
   explainer: z.string().optional(),
+  featured: z.boolean().optional(),
 });
 
 export type CalculatorInput = z.infer<typeof inputSchema>;

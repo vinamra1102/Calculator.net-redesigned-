@@ -33,7 +33,7 @@ function formatResult(value: number): string {
   return formatNumber(value, 8);
 }
 
-export function HeroCalculator() {
+export function HeroCalculator({ embedded = false }: { embedded?: boolean }) {
   const [display, setDisplay] = useState("");
   const [result, setResult] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -71,7 +71,10 @@ export function HeroCalculator() {
   }, []);
 
   return (
-    <div className="mx-auto w-full max-w-sm rounded-lg border border-border bg-surface p-4 shadow-md">
+    <div className={cn(
+      "w-full rounded-lg border bg-surface p-4",
+      embedded ? "border-transparent shadow-none" : "border-border shadow-md mx-auto max-w-sm"
+    )}>
       <div
         className="mb-3 min-h-[60px] rounded-md bg-surface-2 px-4 py-2 text-right"
         aria-live="polite"

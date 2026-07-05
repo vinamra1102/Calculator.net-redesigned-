@@ -185,3 +185,7 @@ export function getCalculatorEntry(id: string): CalculatorEntry | undefined {
 export function getCalculatorDefinitions(): CalculatorDefinition[] {
   return calculatorRegistry.map((c) => c.definition);
 }
+
+export function getFeaturedCalculators(max = 8): CalculatorEntry[] {
+  return calculatorRegistry.filter((c) => c.definition.featured).slice(0, max);
+}

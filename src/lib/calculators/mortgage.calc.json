@@ -3,6 +3,7 @@
   "category": "financial",
   "title": "Mortgage Calculator",
   "summary": "Estimate your monthly payment from home price, down payment, term, and rate.",
+  "featured": true,
   "inputs": [
     {
       "id": "price",
