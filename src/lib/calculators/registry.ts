@@ -54,6 +54,10 @@ import circleJson from "./circle.calc.json";
 import volumeCalcJson from "./volume-calc.calc.json";
 import slopeJson from "./slope.calc.json";
 import distanceCalcJson from "./distance-calc.calc.json";
+import annuityJson from "./annuity.calc.json";
+import inflationJson from "./inflation.calc.json";
+import tdeeJson from "./tdee.calc.json";
+import marginJson from "./margin.calc.json";
 
 import { calculate as mortgageCalc } from "./mortgage.calc";
 import { calculate as loanCalc } from "./loan.calc";
@@ -111,6 +115,10 @@ import { calculate as circleCalc } from "./circle.calc";
 import { calculate as volumeCalcCalc } from "./volume-calc.calc";
 import { calculate as slopeCalc } from "./slope.calc";
 import { calculate as distanceCalcCalc } from "./distance-calc.calc";
+import { calculate as annuityCalc } from "./annuity.calc";
+import { calculate as inflationCalc } from "./inflation.calc";
+import { calculate as tdeeCalc } from "./tdee.calc";
+import { calculate as marginCalc } from "./margin.calc";
 
 import type { CalculatorDefinition, InputValues, CalculatorOutput } from "@/lib/engine/schema";
 
@@ -176,6 +184,10 @@ export const calculatorRegistry: CalculatorEntry[] = [
   { definition: volumeCalcJson as CalculatorDefinition, calculate: volumeCalcCalc },
   { definition: slopeJson as CalculatorDefinition, calculate: slopeCalc },
   { definition: distanceCalcJson as CalculatorDefinition, calculate: distanceCalcCalc },
+  { definition: annuityJson as CalculatorDefinition, calculate: annuityCalc },
+  { definition: inflationJson as CalculatorDefinition, calculate: inflationCalc },
+  { definition: tdeeJson as CalculatorDefinition, calculate: tdeeCalc },
+  { definition: marginJson as CalculatorDefinition, calculate: marginCalc },
 ];
 
 export function getCalculatorEntry(id: string): CalculatorEntry | undefined {

@@ -1,0 +1,13 @@
+{
+  "id": "inflation",
+  "category": "financial",
+  "title": "Inflation Calculator",
+  "summary": "Calculate the future value of money adjusted for inflation.",
+  "featured": false,
+  "inputs": [
+    { "id": "amount", "label": "Current amount", "type": "currency", "default": 1000, "min": 0 },
+    { "id": "rate", "label": "Annual inflation rate", "type": "percent", "default": 3, "min": 0, "max": 50 },
+    { "id": "years", "label": "Years", "type": "number", "default": 10, "min": 1, "max": 50 }
+  ],
+  "kernel": "inflation.calc.ts"
+}

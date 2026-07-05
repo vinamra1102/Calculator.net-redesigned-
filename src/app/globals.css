@@ -142,25 +142,61 @@ body {
 
 /* === Hero Section === */
 
-/* Ambient glow — slow drifting blob of accent color */
-@keyframes glow-drift {
-  0%, 100% {
-    transform: translate(-10%, -10%) scale(1);
-    opacity: 0.12;
-  }
-  33% {
-    transform: translate(5%, -5%) scale(1.1);
-    opacity: 0.16;
-  }
-  66% {
-    transform: translate(-5%, 5%) scale(0.95);
-    opacity: 0.10;
-  }
+/* Aurora bands — elongated, soft, drifting bands of accent color */
+.aurora-band {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(80px);
+  background: var(--accent);
+  will-change: transform;
 }
 
-.hero-glow {
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, var(--accent), transparent 70%);
-  animation: glow-drift 10s ease-in-out infinite;
+.aurora-band-1 {
+  width: 60%;
+  height: 40%;
+  top: 10%;
+  left: -5%;
+  opacity: 0.14;
+  animation: aurora-drift-1 14s ease-in-out infinite;
+}
+
+.aurora-band-2 {
+  width: 50%;
+  height: 30%;
+  top: 40%;
+  right: -10%;
+  opacity: 0.10;
+  animation: aurora-drift-2 18s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+.aurora-band-3 {
+  width: 45%;
+  height: 35%;
+  bottom: 0;
+  left: 20%;
+  opacity: 0.12;
+  animation: aurora-drift-3 16s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+@keyframes aurora-drift-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); }
+  25% { transform: translate(8%, 5%) rotate(3deg) scaleX(1.1); }
+  50% { transform: translate(-3%, 10%) rotate(-2deg) scaleX(0.95); }
+  75% { transform: translate(5%, -3%) rotate(2deg) scaleX(1.05); }
+}
+
+@keyframes aurora-drift-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); }
+  33% { transform: translate(-10%, -5%) rotate(-4deg) scaleX(1.08); }
+  66% { transform: translate(5%, 8%) rotate(3deg) scaleX(0.92); }
+}
+
+@keyframes aurora-drift-3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); }
+  30% { transform: translate(6%, -6%) rotate(2deg) scaleX(1.12); }
+  60% { transform: translate(-8%, 4%) rotate(-3deg) scaleX(0.9); }
 }
 
 /* Glass panel fallback for browsers without backdrop-filter */
@@ -195,10 +231,12 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-glow {
+  .aurora-band {
     animation: none;
-    opacity: 0.12;
   }
+  .aurora-band-1 { opacity: 0.14; transform: translate(0, 0); }
+  .aurora-band-2 { opacity: 0.10; transform: translate(0, 0); }
+  .aurora-band-3 { opacity: 0.12; transform: translate(0, 0); }
   .hero-text,
   .hero-calc {
     animation: none;

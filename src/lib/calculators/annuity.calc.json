@@ -1,0 +1,13 @@
+{
+  "id": "annuity",
+  "category": "financial",
+  "title": "Annuity Calculator",
+  "summary": "Calculate the future value or payout of an annuity investment.",
+  "featured": false,
+  "inputs": [
+    { "id": "payment", "label": "Payment per period", "type": "currency", "default": 500, "min": 0 },
+    { "id": "rate", "label": "Annual interest rate", "type": "percent", "default": 6, "min": 0, "max": 50 },
+    { "id": "years", "label": "Number of years", "type": "number", "default": 20, "min": 1, "max": 50 }
+  ],
+  "kernel": "annuity.calc.ts"
+}

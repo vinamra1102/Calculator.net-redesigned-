@@ -5,8 +5,12 @@ import { HeroCalculator } from "@/components/calculator/HeroCalculator";
 export function HeroSection() {
   return (
     <section className="hero-section relative mb-16 overflow-hidden rounded-2xl" aria-label="Hero">
-      {/* Ambient glow — behind everything, decorative */}
-      <div className="hero-glow pointer-events-none absolute inset-0 -z-10" aria-hidden="true" />
+      {/* Aurora bands — 3 elongated bands at different speeds and phase offsets */}
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <div className="aurora-band aurora-band-1" />
+        <div className="aurora-band aurora-band-2" />
+        <div className="aurora-band aurora-band-3" />
+      </div>
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2 md:py-16 lg:gap-12">
         {/* Text — left column */}

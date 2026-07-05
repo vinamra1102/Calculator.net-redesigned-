@@ -47,7 +47,7 @@
 - [x] Clean git log (7 commits)
 
 ## Phase 5 — Round 3 (Section 17)
-- [x] 17.1: Hero split layout — text left, calculator right, ambient glow, glass panel, entrance animation
+- [x] 17.1: Hero — two-column split with multi-band aurora (3 bands, different speeds/phase), glass calculator panel, entrance animation, all inert under prefers-reduced-motion
 - [x] 17.2: Popular calculators section with `featured` flag in DSL schema
 - [x] 17.3: Homepage restructured — hero, popular, category tiles (no full grid)
-- [x] 56 calculators, all passing §13 battery
+- [x] 60 total calculators, all passing §13 battery

@@ -56,6 +56,10 @@ import { calculate as circleCalc } from "./circle.calc";
 import { calculate as volumeCalcCalc } from "./volume-calc.calc";
 import { calculate as slopeCalc } from "./slope.calc";
 import { calculate as distanceCalcCalc } from "./distance-calc.calc";
+import { calculate as annuityCalc } from "./annuity.calc";
+import { calculate as inflationCalc } from "./inflation.calc";
+import { calculate as tdeeCalc } from "./tdee.calc";
+import { calculate as marginCalc } from "./margin.calc";
 
 import type { InputValues, CalculatorOutput } from "@/lib/engine/schema";
 
@@ -116,6 +120,10 @@ const calculatorFunctions: Record<string, (inputs: InputValues) => CalculatorOut
   "volume-calc": volumeCalcCalc,
   slope: slopeCalc,
   "distance-calc": distanceCalcCalc,
+  annuity: annuityCalc,
+  inflation: inflationCalc,
+  tdee: tdeeCalc,
+  margin: marginCalc,
 };
 
 export function getCalculateFunction(id: string): ((inputs: InputValues) => CalculatorOutput) | undefined {

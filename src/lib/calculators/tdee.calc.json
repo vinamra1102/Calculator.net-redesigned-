@@ -1,0 +1,24 @@
+{
+  "id": "tdee",
+  "category": "fitness-health",
+  "title": "TDEE Calculator",
+  "summary": "Calculate your Total Daily Energy Expenditure based on your activity level.",
+  "featured": false,
+  "inputs": [
+    { "id": "weight", "label": "Weight", "type": "number", "default": 70, "min": 1, "max": 500, "unit": "kg" },
+    { "id": "height", "label": "Height", "type": "number", "default": 175, "min": 1, "max": 300, "unit": "cm" },
+    { "id": "age", "label": "Age", "type": "number", "default": 30, "min": 1, "max": 120, "unit": "years" },
+    { "id": "gender", "label": "Gender", "type": "select", "default": "male", "options": [
+      { "label": "Male", "value": "male" },
+      { "label": "Female", "value": "female" }
+    ]},
+    { "id": "activity", "label": "Activity level", "type": "select", "default": "moderate", "options": [
+      { "label": "Sedentary", "value": "sedentary" },
+      { "label": "Light", "value": "light" },
+      { "label": "Moderate", "value": "moderate" },
+      { "label": "Very active", "value": "very-active" },
+      { "label": "Extra active", "value": "extra-active" }
+    ]}
+  ],
+  "kernel": "tdee.calc.ts"
+}
