@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/lib/theme/ThemeProvider";
+import { CommandPalette } from "@/components/calculator/CommandPalette";
 import "./globals.css";
 
 const inter = Inter({
@@ -51,6 +52,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-bg text-text font-sans antialiased">
         <ThemeProvider>
+          <CommandPalette />
           {children}
         </ThemeProvider>
       </body>

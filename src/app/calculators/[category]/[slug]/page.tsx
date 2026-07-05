@@ -5,6 +5,7 @@ import { TopNav } from "@/components/layout/TopNav";
 import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { CalculatorPage } from "@/components/calculator/CalculatorPage";
+import { CalculatorJsonLd } from "@/components/calculator/JsonLd";
 import { calculatorRegistry, getCalculatorEntry } from "@/lib/calculators/registry";
 import type { CalculatorDefinition } from "@/lib/engine/schema";
 
@@ -172,6 +173,7 @@ export default async function CalculatorRoute({ params }: PageProps) {
     <>
       <SkipLink />
       <TopNav />
+      <CalculatorJsonLd definition={entry.definition} category={category} slug={slug} />
       <main id="main-content" className="mx-auto max-w-6xl px-4 py-8">
         <Suspense fallback={<div className="py-8 text-center text-text-muted">Loading calculator...</div>}>
           <CalculatorPage
