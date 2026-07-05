@@ -1,0 +1,32 @@
+{
+  "id": "fuel-cost",
+  "category": "other",
+  "title": "Fuel Cost Calculator",
+  "summary": "Estimate fuel cost for a trip based on distance and consumption.",
+  "inputs": [
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "default": 300,
+      "min": 1,
+      "unit": "miles"
+    },
+    {
+      "id": "mpg",
+      "label": "Fuel efficiency",
+      "type": "number",
+      "default": 30,
+      "min": 1,
+      "unit": "mpg"
+    },
+    {
+      "id": "pricePerGallon",
+      "label": "Price per gallon",
+      "type": "currency",
+      "default": 3.5,
+      "min": 0
+    }
+  ],
+  "kernel": "fuel-cost.calc.ts"
+}

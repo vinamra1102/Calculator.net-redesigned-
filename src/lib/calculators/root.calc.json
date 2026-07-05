@@ -1,0 +1,24 @@
+{
+  "id": "root",
+  "category": "math",
+  "title": "Root Calculator",
+  "summary": "Calculate nth roots of numbers.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "default": 27
+    },
+    {
+      "id": "degree",
+      "label": "Root degree",
+      "type": "number",
+      "default": 3,
+      "min": 2,
+      "max": 20,
+      "step": 1
+    }
+  ],
+  "kernel": "root.calc.ts"
+}

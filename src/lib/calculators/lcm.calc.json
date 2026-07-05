@@ -1,0 +1,25 @@
+{
+  "id": "lcm",
+  "category": "math",
+  "title": "LCM Calculator",
+  "summary": "Find the Least Common Multiple of two or more numbers.",
+  "inputs": [
+    {
+      "id": "a",
+      "label": "First number",
+      "type": "number",
+      "default": 12,
+      "min": 1,
+      "step": 1
+    },
+    {
+      "id": "b",
+      "label": "Second number",
+      "type": "number",
+      "default": 18,
+      "min": 1,
+      "step": 1
+    }
+  ],
+  "kernel": "lcm.calc.ts"
+}

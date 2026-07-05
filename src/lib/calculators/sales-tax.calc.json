@@ -1,0 +1,24 @@
+{
+  "id": "sales-tax",
+  "category": "other",
+  "title": "Sales Tax Calculator",
+  "summary": "Calculate the total price including sales tax.",
+  "inputs": [
+    {
+      "id": "price",
+      "label": "Price before tax",
+      "type": "currency",
+      "default": 100,
+      "min": 0
+    },
+    {
+      "id": "taxRate",
+      "label": "Tax rate",
+      "type": "percent",
+      "default": 8.25,
+      "min": 0,
+      "max": 50
+    }
+  ],
+  "kernel": "sales-tax.calc.ts"
+}

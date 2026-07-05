@@ -1,0 +1,15 @@
+{
+  "id": "day-of-week",
+  "category": "other",
+  "title": "Day of Week Calculator",
+  "summary": "Find what day of the week a date falls on.",
+  "inputs": [
+    {
+      "id": "date",
+      "label": "Date",
+      "type": "date",
+      "default": "2000-01-01"
+    }
+  ],
+  "kernel": "day-of-week.calc.ts"
+}

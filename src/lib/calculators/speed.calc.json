@@ -1,0 +1,25 @@
+{
+  "id": "speed",
+  "category": "math",
+  "title": "Speed Calculator",
+  "summary": "Calculate speed, distance, or time from the other two.",
+  "inputs": [
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "default": 100,
+      "min": 0,
+      "unit": "km"
+    },
+    {
+      "id": "time",
+      "label": "Time",
+      "type": "number",
+      "default": 2,
+      "min": 0.001,
+      "unit": "hours"
+    }
+  ],
+  "kernel": "speed.calc.ts"
+}

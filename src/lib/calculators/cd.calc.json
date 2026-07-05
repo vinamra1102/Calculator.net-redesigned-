@@ -1,0 +1,52 @@
+{
+  "id": "cd",
+  "category": "financial",
+  "title": "CD Calculator",
+  "summary": "Calculate the return on a Certificate of Deposit at maturity.",
+  "inputs": [
+    {
+      "id": "deposit",
+      "label": "Deposit amount",
+      "type": "currency",
+      "default": 10000,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Annual rate",
+      "type": "percent",
+      "default": 5,
+      "min": 0,
+      "max": 20
+    },
+    {
+      "id": "term",
+      "label": "Term (months)",
+      "type": "number",
+      "default": 12,
+      "min": 1,
+      "max": 120
+    },
+    {
+      "id": "compoundFreq",
+      "label": "Compounding",
+      "type": "select",
+      "default": "12",
+      "options": [
+        {
+          "label": "Daily",
+          "value": "365"
+        },
+        {
+          "label": "Monthly",
+          "value": "12"
+        },
+        {
+          "label": "Quarterly",
+          "value": "4"
+        }
+      ]
+    }
+  ],
+  "kernel": "cd.calc.ts"
+}

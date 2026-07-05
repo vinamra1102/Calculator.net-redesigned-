@@ -1,0 +1,40 @@
+{
+  "id": "pace",
+  "category": "fitness-health",
+  "title": "Pace Calculator",
+  "summary": "Calculate running pace, time, or distance from the other two.",
+  "inputs": [
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "default": 5,
+      "min": 0.1,
+      "unit": "km"
+    },
+    {
+      "id": "hours",
+      "label": "Hours",
+      "type": "number",
+      "default": 0,
+      "min": 0
+    },
+    {
+      "id": "minutes",
+      "label": "Minutes",
+      "type": "number",
+      "default": 25,
+      "min": 0,
+      "max": 59
+    },
+    {
+      "id": "seconds",
+      "label": "Seconds",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 59
+    }
+  ],
+  "kernel": "pace.calc.ts"
+}

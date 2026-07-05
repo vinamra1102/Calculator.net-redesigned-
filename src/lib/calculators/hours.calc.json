@@ -1,0 +1,49 @@
+{
+  "id": "hours",
+  "category": "other",
+  "title": "Hours Calculator",
+  "summary": "Calculate total hours worked between start and end times.",
+  "inputs": [
+    {
+      "id": "startHour",
+      "label": "Start hour",
+      "type": "number",
+      "default": 8,
+      "min": 0,
+      "max": 23
+    },
+    {
+      "id": "startMin",
+      "label": "Start minute",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 59
+    },
+    {
+      "id": "endHour",
+      "label": "End hour",
+      "type": "number",
+      "default": 17,
+      "min": 0,
+      "max": 23
+    },
+    {
+      "id": "endMin",
+      "label": "End minute",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 59
+    },
+    {
+      "id": "breakMin",
+      "label": "Break (minutes)",
+      "type": "number",
+      "default": 30,
+      "min": 0,
+      "max": 480
+    }
+  ],
+  "kernel": "hours.calc.ts"
+}

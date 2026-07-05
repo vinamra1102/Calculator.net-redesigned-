@@ -1,0 +1,41 @@
+{
+  "id": "time-duration",
+  "category": "other",
+  "title": "Time Duration Calculator",
+  "summary": "Calculate the duration between two times.",
+  "inputs": [
+    {
+      "id": "startHour",
+      "label": "Start hour (0-23)",
+      "type": "number",
+      "default": 9,
+      "min": 0,
+      "max": 23
+    },
+    {
+      "id": "startMin",
+      "label": "Start minute",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 59
+    },
+    {
+      "id": "endHour",
+      "label": "End hour (0-23)",
+      "type": "number",
+      "default": 17,
+      "min": 0,
+      "max": 23
+    },
+    {
+      "id": "endMin",
+      "label": "End minute",
+      "type": "number",
+      "default": 30,
+      "min": 0,
+      "max": 59
+    }
+  ],
+  "kernel": "time-duration.calc.ts"
+}

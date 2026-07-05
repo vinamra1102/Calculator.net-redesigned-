@@ -1,0 +1,33 @@
+{
+  "id": "slope",
+  "category": "math",
+  "title": "Slope Calculator",
+  "summary": "Calculate the slope between two points.",
+  "inputs": [
+    {
+      "id": "x1",
+      "label": "X₁",
+      "type": "number",
+      "default": 1
+    },
+    {
+      "id": "y1",
+      "label": "Y₁",
+      "type": "number",
+      "default": 2
+    },
+    {
+      "id": "x2",
+      "label": "X₂",
+      "type": "number",
+      "default": 5
+    },
+    {
+      "id": "y2",
+      "label": "Y₂",
+      "type": "number",
+      "default": 8
+    }
+  ],
+  "kernel": "slope.calc.ts"
+}

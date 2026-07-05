@@ -1,0 +1,17 @@
+{
+  "id": "circle",
+  "category": "math",
+  "title": "Circle Calculator",
+  "summary": "Calculate area, circumference, and diameter of a circle.",
+  "inputs": [
+    {
+      "id": "radius",
+      "label": "Radius",
+      "type": "number",
+      "default": 5,
+      "min": 0.01,
+      "unit": "units"
+    }
+  ],
+  "kernel": "circle.calc.ts"
+}

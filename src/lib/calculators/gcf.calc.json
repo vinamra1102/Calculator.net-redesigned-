@@ -1,0 +1,25 @@
+{
+  "id": "gcf",
+  "category": "math",
+  "title": "GCF Calculator",
+  "summary": "Find the Greatest Common Factor of two or more numbers.",
+  "inputs": [
+    {
+      "id": "a",
+      "label": "First number",
+      "type": "number",
+      "default": 48,
+      "min": 1,
+      "step": 1
+    },
+    {
+      "id": "b",
+      "label": "Second number",
+      "type": "number",
+      "default": 36,
+      "min": 1,
+      "step": 1
+    }
+  ],
+  "kernel": "gcf.calc.ts"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "triangle",
+  "category": "math",
+  "title": "Triangle Calculator",
+  "summary": "Calculate area and perimeter of a triangle.",
+  "inputs": [
+    {
+      "id": "a",
+      "label": "Side a",
+      "type": "number",
+      "default": 3,
+      "min": 0.01,
+      "unit": "units"
+    },
+    {
+      "id": "b",
+      "label": "Side b",
+      "type": "number",
+      "default": 4,
+      "min": 0.01,
+      "unit": "units"
+    },
+    {
+      "id": "c",
+      "label": "Side c",
+      "type": "number",
+      "default": 5,
+      "min": 0.01,
+      "unit": "units"
+    }
+  ],
+  "kernel": "triangle.calc.ts"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "day-counter",
+  "category": "other",
+  "title": "Day Counter",
+  "summary": "Count the number of days between two dates.",
+  "inputs": [
+    {
+      "id": "startDate",
+      "label": "Start date",
+      "type": "date",
+      "default": "2024-01-01"
+    },
+    {
+      "id": "endDate",
+      "label": "End date",
+      "type": "date",
+      "default": "2025-01-01"
+    }
+  ],
+  "kernel": "day-counter.calc.ts"
+}

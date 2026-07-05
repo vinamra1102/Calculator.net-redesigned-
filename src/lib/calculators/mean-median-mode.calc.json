@@ -1,0 +1,16 @@
+{
+  "id": "mean-median-mode",
+  "category": "math",
+  "title": "Mean, Median, Mode Calculator",
+  "summary": "Calculate the mean, median, and mode of a data set.",
+  "inputs": [
+    {
+      "id": "data",
+      "label": "Numbers (comma-separated)",
+      "type": "text",
+      "default": "4, 8, 6, 5, 3, 8, 9, 2, 8",
+      "placeholder": "4, 8, 6, 5, 3"
+    }
+  ],
+  "kernel": "mean-median-mode.calc.ts"
+}

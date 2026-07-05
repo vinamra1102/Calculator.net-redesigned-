@@ -1,0 +1,21 @@
+{
+  "id": "percent-error",
+  "category": "math",
+  "title": "Percent Error Calculator",
+  "summary": "Calculate the percent error between observed and expected values.",
+  "inputs": [
+    {
+      "id": "observed",
+      "label": "Observed value",
+      "type": "number",
+      "default": 95
+    },
+    {
+      "id": "expected",
+      "label": "Expected value",
+      "type": "number",
+      "default": 100
+    }
+  ],
+  "kernel": "percent-error.calc.ts"
+}

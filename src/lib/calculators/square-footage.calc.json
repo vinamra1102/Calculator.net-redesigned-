@@ -1,0 +1,25 @@
+{
+  "id": "square-footage",
+  "category": "other",
+  "title": "Square Footage Calculator",
+  "summary": "Calculate area in square feet, meters, or acres.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "number",
+      "default": 20,
+      "min": 0.01,
+      "unit": "ft"
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "number",
+      "default": 15,
+      "min": 0.01,
+      "unit": "ft"
+    }
+  ],
+  "kernel": "square-footage.calc.ts"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "distance-calc",
+  "category": "math",
+  "title": "Distance Calculator",
+  "summary": "Calculate the distance between two points.",
+  "inputs": [
+    {
+      "id": "x1",
+      "label": "X₁",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "y1",
+      "label": "Y₁",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "x2",
+      "label": "X₂",
+      "type": "number",
+      "default": 3
+    },
+    {
+      "id": "y2",
+      "label": "Y₂",
+      "type": "number",
+      "default": 4
+    }
+  ],
+  "kernel": "distance-calc.calc.ts"
+}

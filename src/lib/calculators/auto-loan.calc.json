@@ -1,0 +1,39 @@
+{
+  "id": "auto-loan",
+  "category": "financial",
+  "title": "Auto Loan Calculator",
+  "summary": "Estimate monthly car payments from price, down payment, term, and rate.",
+  "inputs": [
+    {
+      "id": "price",
+      "label": "Car price",
+      "type": "currency",
+      "default": 35000,
+      "min": 0
+    },
+    {
+      "id": "down",
+      "label": "Down payment",
+      "type": "currency",
+      "default": 5000,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Interest rate",
+      "type": "percent",
+      "default": 6.5,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "id": "years",
+      "label": "Loan term (years)",
+      "type": "number",
+      "default": 5,
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "kernel": "auto-loan.calc.ts"
+}

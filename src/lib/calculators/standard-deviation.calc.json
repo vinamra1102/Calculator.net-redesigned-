@@ -1,0 +1,16 @@
+{
+  "id": "standard-deviation",
+  "category": "math",
+  "title": "Standard Deviation Calculator",
+  "summary": "Calculate standard deviation and variance of a data set.",
+  "inputs": [
+    {
+      "id": "data",
+      "label": "Numbers (comma-separated)",
+      "type": "text",
+      "default": "10, 12, 23, 23, 16, 23, 21, 16",
+      "placeholder": "10, 12, 23, 23, 16"
+    }
+  ],
+  "kernel": "standard-deviation.calc.ts"
+}

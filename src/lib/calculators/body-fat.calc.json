@@ -1,0 +1,62 @@
+{
+  "id": "body-fat",
+  "category": "fitness-health",
+  "title": "Body Fat Calculator",
+  "summary": "Estimate body fat percentage using the US Navy method.",
+  "inputs": [
+    {
+      "id": "gender",
+      "label": "Gender",
+      "type": "select",
+      "default": "male",
+      "options": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        }
+      ]
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "default": 175,
+      "min": 100,
+      "max": 250,
+      "unit": "cm"
+    },
+    {
+      "id": "waist",
+      "label": "Waist circumference",
+      "type": "number",
+      "default": 85,
+      "min": 30,
+      "max": 200,
+      "unit": "cm"
+    },
+    {
+      "id": "neck",
+      "label": "Neck circumference",
+      "type": "number",
+      "default": 37,
+      "min": 20,
+      "max": 80,
+      "unit": "cm"
+    },
+    {
+      "id": "hip",
+      "label": "Hip circumference",
+      "type": "number",
+      "default": 95,
+      "min": 30,
+      "max": 200,
+      "unit": "cm",
+      "hint": "Women only"
+    }
+  ],
+  "kernel": "body-fat.calc.ts"
+}

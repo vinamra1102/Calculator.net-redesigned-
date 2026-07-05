@@ -1,0 +1,34 @@
+{
+  "id": "ideal-weight",
+  "category": "fitness-health",
+  "title": "Ideal Weight Calculator",
+  "summary": "Calculate ideal body weight using multiple formulas.",
+  "inputs": [
+    {
+      "id": "gender",
+      "label": "Gender",
+      "type": "select",
+      "default": "male",
+      "options": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        }
+      ]
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "default": 175,
+      "min": 100,
+      "max": 250,
+      "unit": "cm"
+    }
+  ],
+  "kernel": "ideal-weight.calc.ts"
+}

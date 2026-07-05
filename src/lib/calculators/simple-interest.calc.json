@@ -1,0 +1,32 @@
+{
+  "id": "simple-interest",
+  "category": "financial",
+  "title": "Simple Interest Calculator",
+  "summary": "Calculate simple interest earned on a principal amount.",
+  "inputs": [
+    {
+      "id": "principal",
+      "label": "Principal",
+      "type": "currency",
+      "default": 5000,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Annual rate",
+      "type": "percent",
+      "default": 5,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "id": "years",
+      "label": "Years",
+      "type": "number",
+      "default": 3,
+      "min": 1,
+      "max": 50
+    }
+  ],
+  "kernel": "simple-interest.calc.ts"
+}

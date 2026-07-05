@@ -1,0 +1,40 @@
+{
+  "id": "binary",
+  "category": "math",
+  "title": "Binary Calculator",
+  "summary": "Convert between binary, decimal, hexadecimal, and octal.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "text",
+      "default": "255",
+      "placeholder": "255"
+    },
+    {
+      "id": "from",
+      "label": "From base",
+      "type": "select",
+      "default": "10",
+      "options": [
+        {
+          "label": "Decimal",
+          "value": "10"
+        },
+        {
+          "label": "Binary",
+          "value": "2"
+        },
+        {
+          "label": "Hexadecimal",
+          "value": "16"
+        },
+        {
+          "label": "Octal",
+          "value": "8"
+        }
+      ]
+    }
+  ],
+  "kernel": "binary.calc.ts"
+}

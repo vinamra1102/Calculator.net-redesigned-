@@ -1,0 +1,39 @@
+{
+  "id": "savings",
+  "category": "financial",
+  "title": "Savings Calculator",
+  "summary": "Project your savings growth with regular contributions and interest.",
+  "inputs": [
+    {
+      "id": "initial",
+      "label": "Initial savings",
+      "type": "currency",
+      "default": 1000,
+      "min": 0
+    },
+    {
+      "id": "monthly",
+      "label": "Monthly contribution",
+      "type": "currency",
+      "default": 200,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Annual interest rate",
+      "type": "percent",
+      "default": 4.5,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "id": "years",
+      "label": "Years",
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 50
+    }
+  ],
+  "kernel": "savings.calc.ts"
+}

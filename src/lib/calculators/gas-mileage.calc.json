@@ -1,0 +1,23 @@
+{
+  "id": "gas-mileage",
+  "category": "other",
+  "title": "Gas Mileage Calculator",
+  "summary": "Calculate your vehicle's fuel efficiency in MPG.",
+  "inputs": [
+    {
+      "id": "miles",
+      "label": "Miles driven",
+      "type": "number",
+      "default": 350,
+      "min": 1
+    },
+    {
+      "id": "gallons",
+      "label": "Gallons used",
+      "type": "number",
+      "default": 12,
+      "min": 0.1
+    }
+  ],
+  "kernel": "gas-mileage.calc.ts"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "investment",
+  "category": "financial",
+  "title": "Investment Calculator",
+  "summary": "Project investment growth with regular contributions.",
+  "inputs": [
+    {
+      "id": "initial",
+      "label": "Initial investment",
+      "type": "currency",
+      "default": 10000,
+      "min": 0
+    },
+    {
+      "id": "monthly",
+      "label": "Monthly contribution",
+      "type": "currency",
+      "default": 500,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Expected annual return",
+      "type": "percent",
+      "default": 8,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "id": "years",
+      "label": "Years",
+      "type": "number",
+      "default": 20,
+      "min": 1,
+      "max": 50
+    }
+  ],
+  "kernel": "investment.calc.ts"
+}

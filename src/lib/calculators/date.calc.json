@@ -1,0 +1,21 @@
+{
+  "id": "date",
+  "category": "other",
+  "title": "Date Calculator",
+  "summary": "Calculate the difference between two dates or add/subtract days.",
+  "inputs": [
+    {
+      "id": "startDate",
+      "label": "Start date",
+      "type": "date",
+      "default": "2024-01-01"
+    },
+    {
+      "id": "endDate",
+      "label": "End date",
+      "type": "date",
+      "default": "2024-12-31"
+    }
+  ],
+  "kernel": "date.calc.ts"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rounding",
+  "category": "math",
+  "title": "Rounding Calculator",
+  "summary": "Round numbers to any decimal place or significant figure.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Number",
+      "type": "number",
+      "default": 3.14159
+    },
+    {
+      "id": "decimals",
+      "label": "Decimal places",
+      "type": "number",
+      "default": 2,
+      "min": 0,
+      "max": 15,
+      "step": 1
+    }
+  ],
+  "kernel": "rounding.calc.ts"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "volume-calc",
+  "category": "math",
+  "title": "Volume Calculator",
+  "summary": "Calculate volume of common 3D shapes.",
+  "inputs": [
+    {
+      "id": "shape",
+      "label": "Shape",
+      "type": "select",
+      "default": "sphere",
+      "options": [
+        {
+          "label": "Sphere",
+          "value": "sphere"
+        },
+        {
+          "label": "Cube",
+          "value": "cube"
+        },
+        {
+          "label": "Cylinder",
+          "value": "cylinder"
+        },
+        {
+          "label": "Cone",
+          "value": "cone"
+        }
+      ]
+    },
+    {
+      "id": "radius",
+      "label": "Radius",
+      "type": "number",
+      "default": 5,
+      "min": 0.01,
+      "unit": "units"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "default": 10,
+      "min": 0.01,
+      "unit": "units",
+      "hint": "Cylinder and cone only"
+    }
+  ],
+  "kernel": "volume-calc.calc.ts"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "compound-interest",
+  "category": "financial",
+  "title": "Compound Interest Calculator",
+  "summary": "See how your investment grows with compound interest over time.",
+  "inputs": [
+    {
+      "id": "principal",
+      "label": "Initial investment",
+      "type": "currency",
+      "default": 10000,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Annual interest rate",
+      "type": "percent",
+      "default": 7,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "id": "years",
+      "label": "Years",
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": "compoundFreq",
+      "label": "Compounding",
+      "type": "select",
+      "default": "12",
+      "options": [
+        {
+          "label": "Annually",
+          "value": "1"
+        },
+        {
+          "label": "Quarterly",
+          "value": "4"
+        },
+        {
+          "label": "Monthly",
+          "value": "12"
+        },
+        {
+          "label": "Daily",
+          "value": "365"
+        }
+      ]
+    }
+  ],
+  "kernel": "compound-interest.calc.ts"
+}

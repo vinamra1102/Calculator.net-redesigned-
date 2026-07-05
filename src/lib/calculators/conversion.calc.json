@@ -1,0 +1,69 @@
+{
+  "id": "conversion",
+  "category": "other",
+  "title": "Unit Converter",
+  "summary": "Convert between units of length, weight, volume, and more.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "default": 100
+    },
+    {
+      "id": "category",
+      "label": "Category",
+      "type": "select",
+      "default": "length",
+      "options": [
+        {
+          "label": "Length",
+          "value": "length"
+        },
+        {
+          "label": "Weight",
+          "value": "weight"
+        },
+        {
+          "label": "Temperature",
+          "value": "temperature"
+        },
+        {
+          "label": "Speed",
+          "value": "speed"
+        },
+        {
+          "label": "Volume",
+          "value": "volume"
+        },
+        {
+          "label": "Area",
+          "value": "area"
+        },
+        {
+          "label": "Digital Storage",
+          "value": "data"
+        },
+        {
+          "label": "Time",
+          "value": "time"
+        }
+      ]
+    },
+    {
+      "id": "from",
+      "label": "From",
+      "type": "text",
+      "default": "meter",
+      "placeholder": "meter"
+    },
+    {
+      "id": "to",
+      "label": "To",
+      "type": "text",
+      "default": "foot",
+      "placeholder": "foot"
+    }
+  ],
+  "kernel": "conversion.calc.ts"
+}

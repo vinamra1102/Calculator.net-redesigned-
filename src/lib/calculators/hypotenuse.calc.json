@@ -1,0 +1,23 @@
+{
+  "id": "hypotenuse",
+  "category": "math",
+  "title": "Pythagorean Theorem Calculator",
+  "summary": "Calculate the hypotenuse or any side of a right triangle.",
+  "inputs": [
+    {
+      "id": "a",
+      "label": "Side a",
+      "type": "number",
+      "default": 3,
+      "min": 0.01
+    },
+    {
+      "id": "b",
+      "label": "Side b",
+      "type": "number",
+      "default": 4,
+      "min": 0.01
+    }
+  ],
+  "kernel": "hypotenuse.calc.ts"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "random-number",
+  "category": "math",
+  "title": "Random Number Generator",
+  "summary": "Generate a random number within a specified range.",
+  "inputs": [
+    {
+      "id": "min",
+      "label": "Minimum",
+      "type": "number",
+      "default": 1,
+      "step": 1
+    },
+    {
+      "id": "max",
+      "label": "Maximum",
+      "type": "number",
+      "default": 100,
+      "step": 1
+    },
+    {
+      "id": "count",
+      "label": "How many",
+      "type": "number",
+      "default": 1,
+      "min": 1,
+      "max": 100,
+      "step": 1
+    }
+  ],
+  "kernel": "random-number.calc.ts"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "exponent",
+  "category": "math",
+  "title": "Exponent Calculator",
+  "summary": "Calculate powers and exponents.",
+  "inputs": [
+    {
+      "id": "base",
+      "label": "Base",
+      "type": "number",
+      "default": 2
+    },
+    {
+      "id": "exponent",
+      "label": "Exponent",
+      "type": "number",
+      "default": 10
+    }
+  ],
+  "kernel": "exponent.calc.ts"
+}

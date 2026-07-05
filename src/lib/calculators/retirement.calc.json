@@ -1,0 +1,54 @@
+{
+  "id": "retirement",
+  "category": "financial",
+  "title": "Retirement Calculator",
+  "summary": "Estimate how much you need to save for retirement.",
+  "inputs": [
+    {
+      "id": "currentAge",
+      "label": "Current age",
+      "type": "number",
+      "default": 30,
+      "min": 18,
+      "max": 100
+    },
+    {
+      "id": "retireAge",
+      "label": "Retirement age",
+      "type": "number",
+      "default": 65,
+      "min": 18,
+      "max": 100
+    },
+    {
+      "id": "currentSavings",
+      "label": "Current savings",
+      "type": "currency",
+      "default": 50000,
+      "min": 0
+    },
+    {
+      "id": "monthlyContrib",
+      "label": "Monthly contribution",
+      "type": "currency",
+      "default": 500,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Expected annual return",
+      "type": "percent",
+      "default": 7,
+      "min": 0,
+      "max": 30
+    },
+    {
+      "id": "annualSpending",
+      "label": "Annual spending in retirement",
+      "type": "currency",
+      "default": 60000,
+      "min": 0
+    }
+  ],
+  "kernel": "retirement.calc.ts"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ratio",
+  "category": "math",
+  "title": "Ratio Calculator",
+  "summary": "Simplify ratios and find equivalent ratios.",
+  "inputs": [
+    {
+      "id": "a",
+      "label": "First value",
+      "type": "number",
+      "default": 24,
+      "min": 1,
+      "step": 1
+    },
+    {
+      "id": "b",
+      "label": "Second value",
+      "type": "number",
+      "default": 36,
+      "min": 1,
+      "step": 1
+    }
+  ],
+  "kernel": "ratio.calc.ts"
+}

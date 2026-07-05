@@ -1,0 +1,39 @@
+{
+  "id": "fraction",
+  "category": "math",
+  "title": "Fraction Calculator",
+  "summary": "Add, subtract, multiply, and divide fractions.",
+  "inputs": [
+    {
+      "id": "num1",
+      "label": "Numerator 1",
+      "type": "number",
+      "default": 1,
+      "step": 1
+    },
+    {
+      "id": "den1",
+      "label": "Denominator 1",
+      "type": "number",
+      "default": 3,
+      "step": 1,
+      "min": 1
+    },
+    {
+      "id": "num2",
+      "label": "Numerator 2",
+      "type": "number",
+      "default": 1,
+      "step": 1
+    },
+    {
+      "id": "den2",
+      "label": "Denominator 2",
+      "type": "number",
+      "default": 4,
+      "step": 1,
+      "min": 1
+    }
+  ],
+  "kernel": "fraction.calc.ts"
+}

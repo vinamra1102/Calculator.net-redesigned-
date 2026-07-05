@@ -1,0 +1,23 @@
+{
+  "id": "log",
+  "category": "math",
+  "title": "Logarithm Calculator",
+  "summary": "Calculate logarithms in any base.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "default": 100,
+      "min": 0.0001
+    },
+    {
+      "id": "base",
+      "label": "Base",
+      "type": "number",
+      "default": 10,
+      "min": 0.0001
+    }
+  ],
+  "kernel": "log.calc.ts"
+}

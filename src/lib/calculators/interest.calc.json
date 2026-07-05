@@ -1,0 +1,48 @@
+{
+  "id": "interest",
+  "category": "financial",
+  "title": "Interest Calculator",
+  "summary": "Calculate interest earned on any principal amount.",
+  "inputs": [
+    {
+      "id": "principal",
+      "label": "Principal",
+      "type": "currency",
+      "default": 10000,
+      "min": 0
+    },
+    {
+      "id": "rate",
+      "label": "Annual rate",
+      "type": "percent",
+      "default": 5,
+      "min": 0,
+      "max": 50
+    },
+    {
+      "id": "years",
+      "label": "Years",
+      "type": "number",
+      "default": 5,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": "type",
+      "label": "Interest type",
+      "type": "select",
+      "default": "compound",
+      "options": [
+        {
+          "label": "Compound (monthly)",
+          "value": "compound"
+        },
+        {
+          "label": "Simple",
+          "value": "simple"
+        }
+      ]
+    }
+  ],
+  "kernel": "interest.calc.ts"
+}
