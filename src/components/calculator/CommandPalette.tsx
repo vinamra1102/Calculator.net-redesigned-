@@ -1,39 +1,37 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { calculatorRegistry } from "@/lib/calculators/registry";
 
-export function CommandPalette() {
-  const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
+interface CommandPaletteProps {
+  open: boolean;
+  onClose: () => void;
+  query: string;
+  onQueryChange: (query: string) => void;
+}
+
+export function CommandPalette({ open, onClose, query, onQueryChange }: CommandPaletteProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-        e.preventDefault();
-        setOpen((prev) => {
-          if (!prev) setQuery("");
-          return !prev;
-        });
-      }
-      if (e.key === "Escape") {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
-  }, []);
 
   useEffect(() => {
     if (open) {
       setTimeout(() => inputRef.current?.focus(), 50);
     }
   }, [open]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && open) {
+        onClose();
+      }
+    };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, [open, onClose]);
 
   const filtered = calculatorRegistry.filter(
     (entry) =>
@@ -44,10 +42,10 @@ export function CommandPalette() {
 
   const handleSelect = useCallback(
     (id: string, category: string) => {
-      setOpen(false);
+      onClose();
       router.push(`/calculators/${category}/${id}`);
     },
-    [router]
+    [onClose, router]
   );
 
   const handleKeyDown = useCallback(
@@ -58,8 +56,6 @@ export function CommandPalette() {
     },
     [filtered, handleSelect]
   );
-
-  const handleClose = useCallback(() => setOpen(false), []);
 
   if (!open) return null;
 
@@ -73,7 +69,7 @@ export function CommandPalette() {
       <button
         type="button"
         className="fixed inset-0 bg-black/50"
-        onClick={handleClose}
+        onClick={onClose}
         aria-label="Close search"
       />
       <div className="relative w-full max-w-lg rounded-lg border border-border bg-surface shadow-lg">
@@ -83,7 +79,7 @@ export function CommandPalette() {
             ref={inputRef}
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => onQueryChange(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Search calculators..."
             className="h-12 flex-1 bg-transparent px-3 text-sm text-text outline-none placeholder:text-text-subtle"

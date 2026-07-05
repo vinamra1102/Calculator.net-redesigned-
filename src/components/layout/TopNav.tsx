@@ -3,28 +3,35 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { cn } from "@/lib/cn";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const navLinks = [
-  { href: "/calculators/financial/mortgage", label: "Financial" },
-  { href: "/calculators/fitness-health/bmi", label: "Fitness" },
-  { href: "/calculators/math/scientific", label: "Math" },
-  { href: "/calculators/other/tip", label: "Everyday" },
+  { href: "/calculators/financial", label: "Financial" },
+  { href: "/calculators/fitness-health", label: "Fitness" },
+  { href: "/calculators/math", label: "Math" },
+  { href: "/calculators/other", label: "Everyday" },
 ];
 
-export function TopNav() {
+interface TopNavProps {
+  onSearchOpen?: () => void;
+}
+
+export function TopNav({ onSearchOpen }: TopNavProps) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleSearch = useCallback(() => {
+    onSearchOpen?.();
+  }, [onSearchOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold text-text">
-          <span className="text-accent">calc</span>
-          <span>calculator.net</span>
-          <span className="text-xs font-normal text-text-subtle">(redesigned)</span>
+        <Link href="/" className="text-lg font-bold text-text">
+          <span className="font-bold">calculator.net</span>
+          <span className="ml-1 text-xs font-normal text-text-subtle">(redesigned)</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
@@ -34,8 +41,7 @@ export function TopNav() {
               href={link.href}
               className={cn(
                 "rounded-md px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text",
-                pathname.startsWith(link.href.split("/").slice(0, 3).join("/")) &&
-                  "bg-accent-soft text-accent-text"
+                pathname.startsWith(link.href) && "bg-accent-soft text-accent-text"
               )}
             >
               {link.label}
@@ -46,8 +52,9 @@ export function TopNav() {
         <div className="flex items-center gap-2">
           <button
             type="button"
-            aria-label="Search calculators"
+            aria-label="Search calculators (Ctrl+K)"
             className="flex h-11 w-11 items-center justify-center rounded-md text-text-muted transition-colors hover:bg-surface-2 hover:text-text"
+            onClick={handleSearch}
           >
             <Search className="h-5 w-5" />
           </button>
@@ -72,8 +79,7 @@ export function TopNav() {
               href={link.href}
               className={cn(
                 "block rounded-md px-3 py-3 text-sm font-medium text-text-muted transition-colors hover:text-text",
-                pathname.startsWith(link.href.split("/").slice(0, 3).join("/")) &&
-                  "bg-accent-soft text-accent-text"
+                pathname.startsWith(link.href) && "bg-accent-soft text-accent-text"
               )}
               onClick={() => setMobileOpen(false)}
             >

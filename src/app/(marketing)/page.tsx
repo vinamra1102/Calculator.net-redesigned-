@@ -1,7 +1,5 @@
-import { TopNav } from "@/components/layout/TopNav";
-import { Footer } from "@/components/layout/Footer";
-import { SkipLink } from "@/components/layout/SkipLink";
 import { CalculatorCard } from "@/components/calculator/CalculatorCard";
+import { HeroCalculator } from "@/components/calculator/HeroCalculator";
 
 const calculators = [
   {
@@ -68,29 +66,28 @@ const calculators = [
 
 export default function HomePage() {
   return (
-    <>
-      <SkipLink />
-      <TopNav />
-      <main id="main-content" className="mx-auto max-w-6xl px-4 py-12">
-        <section className="mb-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-text">
-            Free Online Calculators
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
-            Fast, accessible, and accurate tools for financial decisions, fitness tracking, math
-            problems, and everyday calculations. No account needed.
-          </p>
-        </section>
+    <main id="main-content" className="mx-auto max-w-6xl px-4 py-12">
+      <section className="mb-12 text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-text">
+          Free Online Calculators
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
+          Fast, accessible, and accurate tools for financial decisions, fitness tracking, math
+          problems, and everyday calculations. No account needed.
+        </p>
+      </section>
 
-        <section aria-label="All calculators">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {calculators.map((calc) => (
-              <CalculatorCard key={calc.href} {...calc} />
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+      <section aria-label="Scientific calculator" className="mb-12">
+        <HeroCalculator />
+      </section>
+
+      <section aria-label="All calculators">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {calculators.map((calc) => (
+            <CalculatorCard key={calc.href} {...calc} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
