@@ -1,0 +1,46 @@
+{
+  "id": "mortgage",
+  "category": "financial",
+  "title": "Mortgage Calculator",
+  "summary": "Estimate your monthly payment from home price, down payment, term, and rate.",
+  "inputs": [
+    {
+      "id": "price",
+      "label": "Home price",
+      "type": "currency",
+      "default": 400000,
+      "min": 0,
+      "placeholder": "400,000"
+    },
+    {
+      "id": "downPct",
+      "label": "Down payment",
+      "type": "percent",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    },
+    {
+      "id": "years",
+      "label": "Loan term",
+      "type": "number",
+      "default": 30,
+      "min": 1,
+      "max": 50,
+      "unit": "years"
+    },
+    {
+      "id": "rate",
+      "label": "Interest rate",
+      "type": "percent",
+      "default": 6.5,
+      "min": 0,
+      "max": 25,
+      "step": 0.001,
+      "unit": "%"
+    }
+  ],
+  "kernel": "mortgage.calc.ts",
+  "explainer": "mortgage.mdx"
+}

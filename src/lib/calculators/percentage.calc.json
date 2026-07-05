@@ -1,0 +1,35 @@
+{
+  "id": "percentage",
+  "category": "math",
+  "title": "Percentage Calculator",
+  "summary": "Find percentages, percentage change, and what percent one number is of another.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Mode",
+      "type": "select",
+      "default": "percent-of",
+      "options": [
+        { "label": "X% of Y", "value": "percent-of" },
+        { "label": "X is what % of Y", "value": "is-what-percent" },
+        { "label": "% change from X to Y", "value": "percent-change" }
+      ]
+    },
+    {
+      "id": "value1",
+      "label": "First value",
+      "type": "number",
+      "default": 25,
+      "placeholder": "25"
+    },
+    {
+      "id": "value2",
+      "label": "Second value",
+      "type": "number",
+      "default": 200,
+      "placeholder": "200"
+    }
+  ],
+  "kernel": "percentage.calc.ts",
+  "explainer": "percentage.mdx"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "calorie",
+  "category": "fitness-health",
+  "title": "Calorie Calculator",
+  "summary": "Estimate daily calorie needs based on your BMR and activity level.",
+  "inputs": [
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "default": 70,
+      "min": 1,
+      "max": 500,
+      "unit": "kg"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "default": 175,
+      "min": 1,
+      "max": 300,
+      "unit": "cm"
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "default": 30,
+      "min": 1,
+      "max": 120,
+      "unit": "years"
+    },
+    {
+      "id": "gender",
+      "label": "Gender",
+      "type": "select",
+      "default": "male",
+      "options": [
+        { "label": "Male", "value": "male" },
+        { "label": "Female", "value": "female" }
+      ]
+    },
+    {
+      "id": "activity",
+      "label": "Activity level",
+      "type": "select",
+      "default": "moderate",
+      "options": [
+        { "label": "Sedentary (little or no exercise)", "value": "sedentary" },
+        { "label": "Light (exercise 1-3 days/week)", "value": "light" },
+        { "label": "Moderate (exercise 3-5 days/week)", "value": "moderate" },
+        { "label": "Very active (exercise 6-7 days/week)", "value": "very-active" },
+        { "label": "Extra active (physical job + exercise)", "value": "extra-active" }
+      ]
+    }
+  ],
+  "kernel": "calorie.calc.ts",
+  "explainer": "calorie.mdx"
+}

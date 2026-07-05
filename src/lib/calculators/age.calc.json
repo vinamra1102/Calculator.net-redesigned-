@@ -1,0 +1,23 @@
+{
+  "id": "age",
+  "category": "other",
+  "title": "Age Calculator",
+  "summary": "Calculate your exact age in years, months, and days from your date of birth.",
+  "inputs": [
+    {
+      "id": "birthdate",
+      "label": "Date of birth",
+      "type": "date",
+      "default": "1990-01-15",
+      "required": true
+    },
+    {
+      "id": "asOfDate",
+      "label": "As of date",
+      "type": "date",
+      "hint": "Leave blank for today"
+    }
+  ],
+  "kernel": "age.calc.ts",
+  "explainer": "age.mdx"
+}

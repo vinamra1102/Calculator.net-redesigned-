@@ -1,0 +1,35 @@
+{
+  "id": "tip",
+  "category": "other",
+  "title": "Tip Calculator",
+  "summary": "Split a bill with tip among any number of people.",
+  "inputs": [
+    {
+      "id": "bill",
+      "label": "Bill amount",
+      "type": "currency",
+      "default": 85.50,
+      "min": 0,
+      "placeholder": "85.50"
+    },
+    {
+      "id": "tipPct",
+      "label": "Tip percentage",
+      "type": "percent",
+      "default": 18,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    },
+    {
+      "id": "people",
+      "label": "Number of people",
+      "type": "number",
+      "default": 2,
+      "min": 1,
+      "max": 100
+    }
+  ],
+  "kernel": "tip.calc.ts",
+  "explainer": "tip.mdx"
+}

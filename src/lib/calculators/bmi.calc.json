@@ -1,0 +1,28 @@
+{
+  "id": "bmi",
+  "category": "fitness-health",
+  "title": "BMI Calculator",
+  "summary": "Calculate your Body Mass Index and see which standard band you fall into.",
+  "inputs": [
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "default": 70,
+      "min": 1,
+      "max": 500,
+      "unit": "kg"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "default": 175,
+      "min": 1,
+      "max": 300,
+      "unit": "cm"
+    }
+  ],
+  "kernel": "bmi.calc.ts",
+  "explainer": "bmi.mdx"
+}

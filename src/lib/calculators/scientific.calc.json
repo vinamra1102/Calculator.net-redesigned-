@@ -1,0 +1,17 @@
+{
+  "id": "scientific",
+  "category": "math",
+  "title": "Scientific Calculator",
+  "summary": "Evaluate expressions with trigonometry, logarithms, exponents, and more.",
+  "inputs": [
+    {
+      "id": "expression",
+      "label": "Expression",
+      "type": "text",
+      "default": "sin(pi/4) + sqrt(2)",
+      "placeholder": "sin(pi/4) + sqrt(2)"
+    }
+  ],
+  "kernel": "scientific.calc.ts",
+  "explainer": "scientific.mdx"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "currency",
+  "category": "financial",
+  "title": "Currency Converter",
+  "summary": "Convert between currencies using exchange rates.",
+  "inputs": [
+    {
+      "id": "amount",
+      "label": "Amount",
+      "type": "number",
+      "default": 100,
+      "min": 0,
+      "placeholder": "100"
+    },
+    {
+      "id": "from",
+      "label": "From",
+      "type": "select",
+      "default": "USD",
+      "options": [
+        { "label": "US Dollar (USD)", "value": "USD" },
+        { "label": "Euro (EUR)", "value": "EUR" },
+        { "label": "British Pound (GBP)", "value": "GBP" },
+        { "label": "Japanese Yen (JPY)", "value": "JPY" },
+        { "label": "Canadian Dollar (CAD)", "value": "CAD" },
+        { "label": "Australian Dollar (AUD)", "value": "AUD" },
+        { "label": "Indian Rupee (INR)", "value": "INR" }
+      ]
+    },
+    {
+      "id": "to",
+      "label": "To",
+      "type": "select",
+      "default": "EUR",
+      "options": [
+        { "label": "US Dollar (USD)", "value": "USD" },
+        { "label": "Euro (EUR)", "value": "EUR" },
+        { "label": "British Pound (GBP)", "value": "GBP" },
+        { "label": "Japanese Yen (JPY)", "value": "JPY" },
+        { "label": "Canadian Dollar (CAD)", "value": "CAD" },
+        { "label": "Australian Dollar (AUD)", "value": "AUD" },
+        { "label": "Indian Rupee (INR)", "value": "INR" }
+      ]
+    }
+  ],
+  "kernel": "currency.calc.ts",
+  "explainer": "currency.mdx"
+}
