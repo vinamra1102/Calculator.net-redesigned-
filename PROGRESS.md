@@ -2,7 +2,7 @@
 
 ## Phase 0 — Scaffold
 - [x] Init Next.js app (TS strict, App Router)
-- [x] Install dependencies (Tailwind v4, shadcn/ui, Vitest, Prettier, ESLint, math.js, date-fns, zod, recharts, KaTeX, lucide-react)
+- [x] Install dependencies (Tailwind v4, ESLint + jsx-a11y, Prettier, Vitest, math.js, date-fns, zod, recharts, KaTeX, lucide-react)
 - [x] Wire up ESLint with jsx-a11y rules
 - [x] Configure Prettier
 - [x] Set up Vitest
@@ -17,39 +17,39 @@
 - [x] Create PROGRESS.md, DECISIONS.md, CHANGELOG.md
 
 ## Phase 1 — Design System & Shared Components
-- [ ] Write scripts/check-contrast.mjs (contrast verification script)
-- [ ] Build /design-system route (living style guide)
-- [ ] Create ExplainerAccordion component
-- [ ] Wire up Tailwind theme with full token mapping
+- [x] Write scripts/check-contrast.mjs (contrast verification script)
+- [x] Build /design-system route (living style guide)
+- [x] Create ExplainerAccordion component
+- [x] Wire up Tailwind theme with full token mapping
 
 ## Phase 2 — Engine + Reference Implementation
-- [ ] Create DSL zod schema
-- [ ] Create loader/validator for calculator DSL files
-- [ ] Write scripts/validate-calculators.mjs
-- [ ] Set up math.js wrapper
-- [ ] Create shared amortization utility
-- [ ] Build Mortgage calculator end-to-end (inputs, kernel, tests, explainer, JSON-LD, share link)
+- [x] Create DSL zod schema
+- [x] Create loader/validator for calculator DSL files
+- [x] Write scripts/validate-calculators.mjs
+- [x] Set up math.js wrapper
+- [x] Create shared amortization utility
+- [x] Build Mortgage calculator end-to-end (inputs, kernel, tests, explainer, JSON-LD, share link)
 
 ## Phase 3 — Remaining Nine Calculators
-- [ ] Loan calculator
-- [ ] Currency converter
-- [ ] BMI calculator
-- [ ] Calorie/BMR calculator
-- [ ] Scientific calculator
-- [ ] Percentage calculator
-- [ ] Age calculator
-- [ ] GPA calculator
-- [ ] Tip calculator
+- [x] Loan calculator
+- [x] Currency converter
+- [x] BMI calculator
+- [x] Calorie/BMR calculator
+- [x] Scientific calculator
+- [x] Percentage calculator
+- [x] Age calculator
+- [x] GPA calculator
+- [x] Tip calculator
 
 ## Phase 4 — Cross-Cutting Polish
-- [ ] Command palette (Cmd+K)
-- [ ] Calculation history (localStorage)
-- [ ] Full axe sweep on every route
-- [ ] SEO sweep (OG tags, canonical URLs, JSON-LD, sitemap.xml, robots.txt)
-- [ ] Responsive QA (1280/768/390px + UA-spoofing regression check)
+- [x] Command palette (Cmd+K)
+- [x] SEO sweep (JSON-LD, OG tags, canonical URLs, sitemap.xml, robots.txt)
+- [ ] Calculation history (localStorage) — deferred
+- [ ] Full axe sweep — deferred (manual a11y practices followed)
+- [ ] Responsive QA at 1280/768/390px — deferred
 
 ## Phase 5 — Final Deliverables
-- [ ] BUG_TRACEABILITY.md (52 original findings)
-- [ ] MORNING_REPORT.md
-- [ ] Final PROGRESS.md update
-- [ ] Clean git log
+- [x] BUG_TRACEABILITY.md (52 original findings)
+- [x] MORNING_REPORT.md
+- [x] Final PROGRESS.md update
+- [x] Clean git log
