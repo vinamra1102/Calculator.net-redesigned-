@@ -173,7 +173,7 @@ body {
 .aurora-band-3 {
   width: 45%;
   height: 35%;
-  bottom: 0;
+  bottom: 15%;
   left: 20%;
   opacity: 0.12;
   animation: aurora-drift-3 16s ease-in-out infinite;

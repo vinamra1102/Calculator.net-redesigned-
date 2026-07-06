@@ -6,7 +6,14 @@ export function HeroSection() {
   return (
     <section className="hero-section relative mb-16 overflow-hidden rounded-2xl" aria-label="Hero">
       {/* Aurora bands — 3 elongated bands at different speeds and phase offsets */}
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        aria-hidden="true"
+        style={{
+          maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+        }}
+      >
         <div className="aurora-band aurora-band-1" />
         <div className="aurora-band aurora-band-2" />
         <div className="aurora-band aurora-band-3" />
